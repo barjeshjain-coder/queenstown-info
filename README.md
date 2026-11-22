@@ -61,7 +61,8 @@ It also ships topic guides, which can be searched by symptom (for example *"dele
 
 ## Requirements
 
-- macOS, Windows or Linux, with [`uv`](https://docs.astral.sh/uv/) installed. `uv` downloads Python 3.15 itself.
+- Windows, macOS or Linux, with [`uv`](https://docs.astral.sh/uv/) installed. `uv` downloads Python 3.15 itself.
+  Every change is tested automatically on all three.
 - An MCP client, such as Claude Code or Claude Desktop.
 - Admin access to each instance you connect, needed once to create the integration user.
 - A GitHub account. Access to the private repository is granted per person.
@@ -78,4 +79,4 @@ confidential details.**
 
 ## Versions
 
-Current release: **v0.3.0**. Releases are tagged, so you can install a specific version or roll back.
+Current release: **v0.3.1**. Releases are tagged, so you can install a specific version or roll back.
