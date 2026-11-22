@@ -1,0 +1,60 @@
+name: Access request
+description: Ask for access to the private Queenstown repository
+title: "Access request: @"
+labels: ["access-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue is **public**. Do not include passwords, instance URLs, customer names or other confidential details.
+        If the request is approved, you will receive a GitHub invitation to the private repository.
+  - type: input
+    id: github
+    attributes:
+      label: GitHub username
+      description: The account that should get access (usually your own).
+      placeholder: octocat
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Your name
+    validations:
+      required: true
+  - type: input
+    id: org
+    attributes:
+      label: Organisation and team
+      placeholder: "e.g. Solution Consulting, partner company name"
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: Role
+      options:
+        - Solution consultant / pre-sales
+        - Developer / admin
+        - Partner / implementer
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: use
+    attributes:
+      label: What will you use it for?
+      description: A sentence or two. No customer names or instance URLs.
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmation
+      options:
+        - label: I will use it on non-production instances first and mark production instances as `prod`.
+          required: true
+        - label: I will not share the repository or its code without the owner's permission.
+          required: true
+        - label: I understand this is a personal project, not an official or supported product.
+          required: true
